@@ -5,4 +5,4 @@ Applications and Web Services" at Åbo Akademi
 
 ### License
 
-MIT(#https://raw.githubusercontent.com/ninjahoahong/django-yaas/master/LICENSE)
+[MIT](#https://raw.githubusercontent.com/ninjahoahong/django-yaas/master/LICENSE)
