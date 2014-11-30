@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+ {%  if not auctions %}
+  <p>No auctions<p>
+ {% endif %}
+
+{%  for auction in auctions %}
+    <h2><a href="/allauction/{{ auction.id }}">{{ auction.title }}</a></h2>
+    <p><b>Description:</b> {{ auction.description }} </p>
+    <p><b>Min Price:</b> {{ auction.min_price }}</p>
+    <p><b>Current Price:</b> {{ bid.bid_price }}</p>
+    <p><b>Deadline:</b> {{ auction.end_time }}</p>
+    <p><b>Seller:</b> {{ auction.seller }}</p>
+    <p><a href="/editdescription/{{ auction.id }}">edit description</a> <br> <a href="/addbid/{{ auction.id }}" >add bid</a> </p>
+{%  endfor %}
+{% endblock %}

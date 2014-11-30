@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block content %}
+
+    <h2>Welcome {{ user.username }}</h2>
+    <p> <b>email: </b> {{user.email}}</p>
+    <p><a href="/editpassword/">change password</a></p>
+    <p> <a href="/editemail/">change email</a></p>
+    <p> <a href="/logout/">logout</a></p>
+
+{% endblock %}

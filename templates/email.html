@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Change Email{% endblock %}
+{% block head %}Change Email{% endblock %}
+{% block content %}
+    <p> Current Email: {{ user.email }} </p>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Change Email" />
+    </form>
+{% endblock %}

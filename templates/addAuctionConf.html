@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+<br xmlns="http://www.w3.org/1999/html"/>{{ msg }}
+<br>
+
+    <form action="/add_auctionConf/" method="post">
+        {% csrf_token %}
+        <label> <b>Title:</b> {{ a_title }}</label><br>
+        <label> <b>Description:</b> {{ a_description }}</label><br>
+        <label> <b>Min Price:</b> {{ a_min_price }}</label><br>
+        <label> <b>Deadline:</b> {{ a_end_time }}</label><br>
+        <br>
+
+        Confirm to create the auction
+        <p><input type="radio" name="answer" value="Yes">Yes<br>
+        <input type="radio" name="answer" value="No">No</p>
+        <INPUT TYPE=HIDDEN NAME="a_title" VALUE="{{a_title}}">
+        <INPUT TYPE=HIDDEN NAME="a_description" VALUE="{{a_description}}">
+        <INPUT TYPE=HIDDEN NAME="a_min_price" VALUE="{{a_min_price}}">
+        <INPUT TYPE=HIDDEN NAME="a_end_time" VALUE="{{a_end_time}}">
+
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

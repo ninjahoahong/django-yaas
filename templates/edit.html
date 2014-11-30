@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <form action="/editdescription/{{ id }}" method="post">
+        {% csrf_token %}
+        <textarea name="description" cols="80" rows="30">{{ description }}</textarea>
+        <input type="submit" value="Save">
+    </form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <form action="/addbid/{{ id }}" method="post">
+        {% csrf_token %}
+        <textarea name="min_price" cols="20" rows="1">{{ min_price }}</textarea>
+        <input type="submit" value="Bid">
+    </form>
+{% endblock %}
